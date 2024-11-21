@@ -7,20 +7,20 @@ public class Tutorial {
   @Schema(accessMode = Schema.AccessMode.READ_ONLY)
   private long id = 0;
 
-  private String title;
+  private String nome;
 
-  private String description;
+  private String conteudo;
 
-  private boolean published;
+  private String escola;
 
   public Tutorial() {
 
   }
 
-  public Tutorial(String title, String description, boolean published) {
-    this.title = title;
-    this.description = description;
-    this.published = published;
+  public Tutorial(String nome, String conteudo, String escola) {
+    this.nome = nome;
+    this.conteudo = conteudo;
+    this.escola = escola;
   }
 
   public void setId(long id) {
@@ -31,33 +31,34 @@ public class Tutorial {
     return id;
   }
 
-  public String getTitle() {
-    return title;
+  public String getNome() {
+    return nome;
   }
 
-  public void setTitle(String title) {
-    this.title = title;
+  public void setNome(String nome) {
+    this.nome = nome;
   }
 
-  public String getDescription() {
-    return description;
+  public String getConteudo() {
+    return conteudo;
   }
 
-  public void setDescription(String description) {
-    this.description = description;
+  public void setConteudo(String conteudo) {
+    this.conteudo = conteudo;
   }
+  
+  public String getEscola() {
+	    return escola;
+	  }
 
-  public boolean isPublished() {
-    return published;
-  }
+  public void setEscola(String escola) {
+	    this.escola = escola;
+	  }
 
-  public void setPublished(boolean isPublished) {
-    this.published = isPublished;
-  }
 
   @Override
   public String toString() {
-    return "Tutorial [id=" + id + ", title=" + title + ", desc=" + description + ", published=" + published + "]";
+    return "Tutorial [id=" + id + ", nome=" + nome + ", conteudo=" + conteudo + ", escola=" + escola + "]";
   }
 
 }
